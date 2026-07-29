@@ -37,16 +37,16 @@
     --fonte-principal: "Chalet", sans-serif;
     --fonte-titulo: "ChaletComprime", sans-serif;
 
-    /* Tamanhos */
-    --fonte-menu: 15px;
-    --fonte-texto: 16px;
-    --fonte-paragrafo: 18px;
+/* Tamanhos */
+    --fonte-menu: 0.9375rem;           /* 15px */
+    --fonte-texto: 1rem;               /* 16px */
+    --fonte-paragrafo: 1.125rem;       /* 18px */
 
-    --fonte-botao: 28px;
+    --fonte-botao: 1.75rem;            /* 28px */
 
-    --fonte-titulo-card: 52px;
-    --fonte-titulo-secao: 50px;
-    --fonte-titulo-hero: 55px;
+    --fonte-titulo-card: 3.25rem;      /* 52px */
+    --fonte-titulo-secao: 3.125rem;    /* 50px */
+    --fonte-titulo-hero: 3.4375rem;    /* 55px */
 
 
 
@@ -54,17 +54,17 @@
        ESPAÇAMENTOS
     ========================================== */
 
-    --espacamento-pequeno: 10px;
-    --espacamento-medio: 15px;
-    --espacamento-grande: 20px;
+    --espacamento-pequeno: 0.625rem;       /* 10px */
+    --espacamento-medio: 0.9375rem;        /* 15px */
+    --espacamento-grande: 1.25rem;         /* 20px */
 
-    --espacamento-xl: 30px;
-    --espacamento-xxl: 32px;
-    --espacamento-gigante: 40px;
-    --espacamento-secao: 50px;
-    --espacamento-container: 80px;
+    --espacamento-xl: 1.875rem;            /* 30px */
+    --espacamento-xxl: 2rem;               /* 32px */
+    --espacamento-gigante: 2.5rem;         /* 40px */
+    --espacamento-secao: 3.125rem;         /* 50px */
+    --espacamento-container: 5rem;         /* 80px */
 
-    --padding-hero-lateral: 170px;
+    --padding-hero-lateral: 10.625rem;     /* 170px */
 
 
 
@@ -72,13 +72,13 @@
        DIMENSÕES
     ========================================== */
 
-    --altura-cabecalho: 80px;
+    --altura-cabecalho: 5rem;                  /* 80px */
 
     --largura-card: 50%;
-    --largura-imagem-card: 270px;
+    --largura-imagem-card: 16.875rem;          /* 270px */
 
-    --largura-maxima-conteudo: 780px;
-    --largura-logo-hero: 150px;
+    --largura-maxima-conteudo: 48.75rem;       /* 780px */
+    --largura-logo-hero: 9.375rem;             /* 150px */
 
 
 
@@ -86,7 +86,7 @@
        BORDAS
     ========================================== */
 
-    --borda-fina: .5px solid var(--cor-texto-primario);
+    --borda-fina: 0.5px solid var(--cor-texto-primario);
     --borda-padrao: 1px solid;
 
     --raio-botao: 4px;

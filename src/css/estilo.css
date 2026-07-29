@@ -1,241 +1,227 @@
-@font-face {
-    font-family: "ChaletComprime";
-    src: url("../fontes/ChaletComprime.ttf");
-}
-
-body {
-    background-color: var(--cor-fundo-primario);
-    color: var(--cor-texto-primario);
-}
+/* ==========================================
+   CABEÇALHO
+========================================== */
 
 .cabecalho {
-    height: var(--altura-cabecalho);
-    background-color: var(--cor-fundo-secundario);
-    padding: 0 var(--espacamento-container);
-    border-bottom: var(--borda-padrao) var(--cor-fundo-primario);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    height: var(--altura-cabecalho);
+    padding: 0 var(--espacamento-container);
+
+    background-color: var(--cor-fundo-secundario);
+    border-bottom: var(--borda-padrao) var(--cor-fundo-primario);
 }
 
-.cabecalho .logo {
+.logo {
     display: flex;
+    align-items: center;
     gap: var(--espacamento-medio);
 }
 
-.cabecalho .menu {
+.menu {
     display: flex;
     gap: var(--espacamento-xl);
 }
 
-.cabecalho .menu li a {
+.menu a {
     padding: var(--espacamento-xl);
+
     color: var(--cor-texto-secundario);
-    font-weight: bolder;
-    font-size: var(--fonte-menu);
+
     font-family: var(--fonte-principal);
+    font-size: var(--fonte-menu);
+    font-weight: 700;
 }
 
-.cabecalho .menu li a:hover {
+.menu a:hover {
     border-bottom: 2px solid var(--cor-texto-primario);
 }
 
-.home {
-    display: flex;
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
     position: relative;
+    display: flex;
+
     min-height: calc(100vh - var(--altura-cabecalho));
 }
 
-.home::after {
-    content: '';
+.hero::after {
+    content: "";
+
     position: absolute;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(
-        90deg,
-        var(--cor-gradiente-escuro),
-        var(--cor-gradiente-medio) 35%,
-        transparent 65%
-    );
+    inset: 0;
+
+    background: linear-gradient(90deg,
+            var(--cor-gradiente-escuro),
+            var(--cor-gradiente-medio) 35%,
+            transparent 65%);
 }
 
-.home .imagem-fundo {
+.hero-imagem {
     width: 100%;
     object-fit: cover;
 }
 
-.home .informacoes {
+.hero-conteudo {
     position: absolute;
     z-index: 1;
-    min-height: calc(100vh - var(--altura-cabecalho));
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: var(--espacamento-xxl);
-    padding:
-        var(--espacamento-container)
-        var(--espacamento-container)
-        var(--espacamento-container)
-        var(--padding-hero-lateral);
+
+    min-height: calc(100vh - var(--altura-cabecalho));
     max-width: var(--largura-maxima-conteudo);
+
+    padding:
+        var(--espacamento-container) var(--espacamento-container) var(--espacamento-container) var(--padding-hero-lateral);
 }
 
-.home .informacoes img {
-    max-width: var(--largura-logo-hero);
-}
-
-.home .informacoes .lista-de-jogos {
+.hero-marcas {
     display: flex;
     gap: var(--espacamento-xxl);
 }
 
-.home .informacoes .titulo {
-    font-family: var(--fonte-titulo);
+.hero-marcas img {
+    max-width: var(--largura-logo-hero);
+}
+
+.hero-titulo {
     font-size: var(--fonte-titulo-hero);
 }
 
-.home .informacoes .texto {
-    font-family: var(--fonte-principal);
+.hero-texto {
     font-size: var(--fonte-paragrafo);
     line-height: 1.6;
 }
 
-.btn-comprar,
-.btn-plataforma {
-    background-color: var(--cor-botao-transparente);
-    border: var(--borda-fina);
-    border-radius: var(--raio-botao);
-    font-family: var(--fonte-titulo);
-    font-size: var(--fonte-botao);
-    text-align: center;
-    padding: var(--espacamento-grande) 40px;
-    text-transform: uppercase;
+.btn-comprar {
     width: 50%;
-    transition: var(--transicao-padrao);
 }
 
-.btn-plataforma {
-    color: var(--cor-texto-primario);
-    width: 100%;
-    cursor: pointer;
+
+
+/* ==========================================
+   SEÇÃO DE COMPRA
+========================================== */
+
+.secao-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: var(--espacamento-secao);
+
+    text-align: center;
 }
 
-.btn-comprar:hover {
-    background-color: var(--cor-fundo-claro);
-    color: var(--cor-texto-escuro);
+.secao-compra>.titulo {
+    margin-bottom: var(--espacamento-secao);
+
+    font-size: var(--fonte-titulo-secao);
+    font-weight: 700;
 }
 
-.compre-ja .capa-do-jogo {
+.card-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espacamento-gigante);
+
+    width: var(--largura-card);
+    padding: var(--espacamento-container);
+
+    background-color: var(--cor-texto-escuro);
+    border-radius: var(--raio-card);
+}
+
+.card-capa {
     width: var(--largura-imagem-card);
 }
 
-.compre-ja {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: var(--espacamento-secao);
-    align-items: center;
-}
-
-.compre-ja .titulo {
-    font-family: var(--fonte-titulo);
-    font-size: var(--fonte-titulo-secao);
-    font-weight: 700;
-    margin-bottom: var(--espacamento-secao);
-}
-
-.compre-ja .cartao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--cor-texto-escuro);
-    width: var(--largura-card);
-    border-radius: var(--raio-card);
-    padding: var(--espacamento-container);
-    gap: var(--espacamento-gigante);
-}
-
-.compre-ja .informacoes {
+.card-conteudo {
     display: flex;
     flex-direction: column;
     gap: var(--espacamento-xl);
 }
 
-.compre-ja .informacoes h3 {
-    font-family: var(--fonte-titulo);
+.card-conteudo h3 {
     font-size: var(--fonte-titulo-card);
     font-weight: 700;
 }
 
-.compre-ja .informacoes p {
+.card-conteudo p {
     color: var(--cor-texto-secundario);
-    font-family: var(--fonte-principal);
+
     font-size: var(--fonte-texto);
     line-height: 1.6;
 }
 
-.compre-ja .informacoes .plataformas {
+.lista-plataformas {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--espacamento-xxl);
     justify-content: center;
+    gap: var(--espacamento-xxl);
 }
 
-.compre-ja .btn-plataforma .plataformas {
-    margin-top: var(--espacamento-pequeno);
-    display: flex;
+
+
+/* ==========================================
+   DROPDOWN DE PLATAFORMAS
+========================================== */
+
+.btn-plataforma {
+    width: 100%;
+}
+
+.lista-plataformas-dropdown {
+    display: none;
     flex-direction: column;
     gap: var(--espacamento-grande);
-    transition: var(--transicao-padrao);
-    display: none;
+
+    margin-top: var(--espacamento-pequeno);
+
     opacity: 0;
+    transition: var(--transicao-padrao);
 }
 
-.compre-ja .btn-plataforma .plataformas.ativo {
+.lista-plataformas-dropdown.ativo {
     display: flex;
     opacity: 1;
 }
 
-.compre-ja .btn-plataforma .plataformas li {
+.lista-plataformas-dropdown li {
     padding: var(--espacamento-grande);
 }
 
-.compre-ja .btn-plataforma .plataformas li:nth-child(1) {
+.plataforma-playstation {
     border: var(--borda-padrao) var(--cor-playstation);
 }
 
-.compre-ja .btn-plataforma .plataformas li:nth-child(1):hover {
+.plataforma-playstation:hover {
     background-color: var(--cor-playstation);
 }
 
-.compre-ja .btn-plataforma .plataformas li:nth-child(2) {
+.plataforma-xbox {
     border: var(--borda-padrao) var(--cor-xbox);
 }
 
-.compre-ja .btn-plataforma .plataformas li:nth-child(2):hover {
+.plataforma-xbox:hover {
     background-color: var(--cor-xbox);
 }
 
-.compre-ja .btn-plataforma .plataformas li:nth-child(3) {
-    border: var(--borda-padrao) var(--cor-playstation);
-}
-
-.compre-ja .btn-plataforma .plataformas li:nth-child(3):hover {
-    background-color: var(--cor-playstation);
-}
-
-.compre-ja .btn-plataforma .plataformas li:nth-child(4) {
-    border: var(--borda-padrao) var(--cor-xbox);
-}
-
-.compre-ja .btn-plataforma .plataformas li:nth-child(4):hover {
-    background-color: var(--cor-xbox);
-}
-
-.compre-ja .btn-plataforma .plataformas li:nth-child(5) {
+.plataforma-pc {
     border: var(--borda-padrao) var(--cor-pc);
 }
 
-.compre-ja .btn-plataforma .plataformas li:nth-child(5):hover {
+.plataforma-pc:hover {
     background-color: var(--cor-pc);
 }

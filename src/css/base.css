@@ -1,0 +1,86 @@
+/* ==========================================
+   FONTES
+========================================== */
+
+@font-face {
+    font-family: "ChaletComprime";
+    src: url("../fontes/ChaletComprime.ttf");
+}
+
+/* ==========================================
+   ESTILOS GLOBAIS
+========================================== */
+
+body {
+    background-color: var(--cor-fundo-primario);
+    color: var(--cor-texto-primario);
+    font-family: var(--fonte-principal);
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a {
+    transition: var(--transicao-padrao);
+}
+
+/* ==========================================
+   TÍTULOS
+========================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fonte-titulo);
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.btn-comprar,
+.btn-plataforma {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--espacamento-grande) 2.5rem;
+
+    border: var(--borda-fina);
+    border-radius: var(--raio-botao);
+
+    background-color: var(--cor-botao-transparente);
+
+    color: var(--cor-texto-primario);
+
+    font-family: var(--fonte-titulo);
+    font-size: var(--fonte-botao);
+    text-transform: uppercase;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: var(--transicao-padrao);
+}
+
+.btn-comprar:hover,
+.btn-plataforma:hover {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
+}
+
+/* ==========================================
+   UTILITÁRIOS
+========================================== */
+
+.oculto {
+    display: none;
+}
+
+.visivel {
+    display: flex;
+}
