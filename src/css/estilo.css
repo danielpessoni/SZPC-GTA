@@ -180,15 +180,29 @@
 
 .btn-plataforma {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espacamento-grande);
+}
+
+.btn-plataforma:hover {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
+}
+
+.btn-plataforma.ativo,
+.btn-plataforma.ativo:hover {
+    background-color: var(--cor-botao-transparente);
+    color: var(--cor-texto-primario);
 }
 
 .lista-plataformas-dropdown {
+    width: 100%;
     display: none;
     flex-direction: column;
     gap: var(--espacamento-grande);
-
     margin-top: var(--espacamento-pequeno);
-
     opacity: 0;
     transition: var(--transicao-padrao);
 }
@@ -200,6 +214,7 @@
 
 .lista-plataformas-dropdown li {
     padding: var(--espacamento-grande);
+    transition: var(--transicao-padrao);
 }
 
 .plataforma-playstation {

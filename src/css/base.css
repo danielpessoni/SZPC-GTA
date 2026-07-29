@@ -67,8 +67,7 @@ h6 {
     transition: var(--transicao-padrao);
 }
 
-.btn-comprar:hover,
-.btn-plataforma:hover {
+.btn-comprar:hover {
     background-color: var(--cor-fundo-claro);
     color: var(--cor-texto-escuro);
 }
