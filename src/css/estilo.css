@@ -1,0 +1,241 @@
+@font-face {
+    font-family: "ChaletComprime";
+    src: url("../fontes/ChaletComprime.ttf");
+}
+
+body {
+    background-color: var(--cor-fundo-primario);
+    color: var(--cor-texto-primario);
+}
+
+.cabecalho {
+    height: var(--altura-cabecalho);
+    background-color: var(--cor-fundo-secundario);
+    padding: 0 var(--espacamento-container);
+    border-bottom: var(--borda-padrao) var(--cor-fundo-primario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho .logo {
+    display: flex;
+    gap: var(--espacamento-medio);
+}
+
+.cabecalho .menu {
+    display: flex;
+    gap: var(--espacamento-xl);
+}
+
+.cabecalho .menu li a {
+    padding: var(--espacamento-xl);
+    color: var(--cor-texto-secundario);
+    font-weight: bolder;
+    font-size: var(--fonte-menu);
+    font-family: var(--fonte-principal);
+}
+
+.cabecalho .menu li a:hover {
+    border-bottom: 2px solid var(--cor-texto-primario);
+}
+
+.home {
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - var(--altura-cabecalho));
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--cor-gradiente-escuro),
+        var(--cor-gradiente-medio) 35%,
+        transparent 65%
+    );
+}
+
+.home .imagem-fundo {
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .informacoes {
+    position: absolute;
+    z-index: 1;
+    min-height: calc(100vh - var(--altura-cabecalho));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--espacamento-xxl);
+    padding:
+        var(--espacamento-container)
+        var(--espacamento-container)
+        var(--espacamento-container)
+        var(--padding-hero-lateral);
+    max-width: var(--largura-maxima-conteudo);
+}
+
+.home .informacoes img {
+    max-width: var(--largura-logo-hero);
+}
+
+.home .informacoes .lista-de-jogos {
+    display: flex;
+    gap: var(--espacamento-xxl);
+}
+
+.home .informacoes .titulo {
+    font-family: var(--fonte-titulo);
+    font-size: var(--fonte-titulo-hero);
+}
+
+.home .informacoes .texto {
+    font-family: var(--fonte-principal);
+    font-size: var(--fonte-paragrafo);
+    line-height: 1.6;
+}
+
+.btn-comprar,
+.btn-plataforma {
+    background-color: var(--cor-botao-transparente);
+    border: var(--borda-fina);
+    border-radius: var(--raio-botao);
+    font-family: var(--fonte-titulo);
+    font-size: var(--fonte-botao);
+    text-align: center;
+    padding: var(--espacamento-grande) 40px;
+    text-transform: uppercase;
+    width: 50%;
+    transition: var(--transicao-padrao);
+}
+
+.btn-plataforma {
+    color: var(--cor-texto-primario);
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-comprar:hover {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
+}
+
+.compre-ja .capa-do-jogo {
+    width: var(--largura-imagem-card);
+}
+
+.compre-ja {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: var(--espacamento-secao);
+    align-items: center;
+}
+
+.compre-ja .titulo {
+    font-family: var(--fonte-titulo);
+    font-size: var(--fonte-titulo-secao);
+    font-weight: 700;
+    margin-bottom: var(--espacamento-secao);
+}
+
+.compre-ja .cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-texto-escuro);
+    width: var(--largura-card);
+    border-radius: var(--raio-card);
+    padding: var(--espacamento-container);
+    gap: var(--espacamento-gigante);
+}
+
+.compre-ja .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-xl);
+}
+
+.compre-ja .informacoes h3 {
+    font-family: var(--fonte-titulo);
+    font-size: var(--fonte-titulo-card);
+    font-weight: 700;
+}
+
+.compre-ja .informacoes p {
+    color: var(--cor-texto-secundario);
+    font-family: var(--fonte-principal);
+    font-size: var(--fonte-texto);
+    line-height: 1.6;
+}
+
+.compre-ja .informacoes .plataformas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-xxl);
+    justify-content: center;
+}
+
+.compre-ja .btn-plataforma .plataformas {
+    margin-top: var(--espacamento-pequeno);
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-grande);
+    transition: var(--transicao-padrao);
+    display: none;
+    opacity: 0;
+}
+
+.compre-ja .btn-plataforma .plataformas.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.compre-ja .btn-plataforma .plataformas li {
+    padding: var(--espacamento-grande);
+}
+
+.compre-ja .btn-plataforma .plataformas li:nth-child(1) {
+    border: var(--borda-padrao) var(--cor-playstation);
+}
+
+.compre-ja .btn-plataforma .plataformas li:nth-child(1):hover {
+    background-color: var(--cor-playstation);
+}
+
+.compre-ja .btn-plataforma .plataformas li:nth-child(2) {
+    border: var(--borda-padrao) var(--cor-xbox);
+}
+
+.compre-ja .btn-plataforma .plataformas li:nth-child(2):hover {
+    background-color: var(--cor-xbox);
+}
+
+.compre-ja .btn-plataforma .plataformas li:nth-child(3) {
+    border: var(--borda-padrao) var(--cor-playstation);
+}
+
+.compre-ja .btn-plataforma .plataformas li:nth-child(3):hover {
+    background-color: var(--cor-playstation);
+}
+
+.compre-ja .btn-plataforma .plataformas li:nth-child(4) {
+    border: var(--borda-padrao) var(--cor-xbox);
+}
+
+.compre-ja .btn-plataforma .plataformas li:nth-child(4):hover {
+    background-color: var(--cor-xbox);
+}
+
+.compre-ja .btn-plataforma .plataformas li:nth-child(5) {
+    border: var(--borda-padrao) var(--cor-pc);
+}
+
+.compre-ja .btn-plataforma .plataformas li:nth-child(5):hover {
+    background-color: var(--cor-pc);
+}

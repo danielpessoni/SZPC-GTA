@@ -1,0 +1,103 @@
+:root {
+
+    /* ==========================================
+       CORES
+    ========================================== */
+
+    /* Fundos */
+    --cor-fundo-primario: #282828;
+    --cor-fundo-secundario: #0b0b0b;
+    --cor-fundo-claro: #ffffff;
+
+    /* Textos */
+    --cor-texto-primario: #ffffff;
+    --cor-texto-secundario: #e8e8e8;
+    --cor-texto-escuro: #000000;
+
+    /* Plataformas */
+    --cor-playstation: #00439c;
+    --cor-xbox: #387a26;
+    --cor-pc: #fcaf17;
+
+    /* Botões */
+    --cor-botao-transparente: rgba(255, 255, 255, 0.1);
+
+    /* Gradientes */
+    --cor-gradiente-escuro: rgba(0, 0, 0, 0.85);
+    --cor-gradiente-medio: rgba(0, 0, 0, 0.7);
+    --cor-gradiente-claro: rgba(0, 0, 0, 0.4);
+
+
+
+    /* ==========================================
+       TIPOGRAFIA
+    ========================================== */
+
+    /* Fontes */
+    --fonte-principal: "Chalet", sans-serif;
+    --fonte-titulo: "ChaletComprime", sans-serif;
+
+    /* Tamanhos */
+    --fonte-menu: 15px;
+    --fonte-texto: 16px;
+    --fonte-paragrafo: 18px;
+
+    --fonte-botao: 28px;
+
+    --fonte-titulo-card: 52px;
+    --fonte-titulo-secao: 50px;
+    --fonte-titulo-hero: 55px;
+
+
+
+    /* ==========================================
+       ESPAÇAMENTOS
+    ========================================== */
+
+    --espacamento-pequeno: 10px;
+    --espacamento-medio: 15px;
+    --espacamento-grande: 20px;
+
+    --espacamento-xl: 30px;
+    --espacamento-xxl: 32px;
+    --espacamento-gigante: 40px;
+    --espacamento-secao: 50px;
+    --espacamento-container: 80px;
+
+    --padding-hero-lateral: 170px;
+
+
+
+    /* ==========================================
+       DIMENSÕES
+    ========================================== */
+
+    --altura-cabecalho: 80px;
+
+    --largura-card: 50%;
+    --largura-imagem-card: 270px;
+
+    --largura-maxima-conteudo: 780px;
+    --largura-logo-hero: 150px;
+
+
+
+    /* ==========================================
+       BORDAS
+    ========================================== */
+
+    --borda-fina: .5px solid var(--cor-texto-primario);
+    --borda-padrao: 1px solid;
+
+    --raio-botao: 4px;
+    --raio-card: 10px;
+
+
+
+    /* ==========================================
+       TRANSIÇÕES
+    ========================================== */
+
+    --transicao-padrao: .3s ease-in;
+
+}
