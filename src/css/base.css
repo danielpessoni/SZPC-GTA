@@ -11,6 +11,10 @@
    ESTILOS GLOBAIS
 ========================================== */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--cor-fundo-primario);
     color: var(--cor-texto-primario);
@@ -70,6 +74,20 @@ h6 {
 .btn-comprar:hover {
     background-color: var(--cor-fundo-claro);
     color: var(--cor-texto-escuro);
+}
+
+.opc-plataforma{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--espacamento-grande);
+    border: none;
+    border-radius: var(--raio-botao);
+    background-color: transparent;
+    color: var(--cor-texto-primario);
+    cursor: pointer;
+    transition: var(--transicao-padrao);
 }
 
 /* ==========================================

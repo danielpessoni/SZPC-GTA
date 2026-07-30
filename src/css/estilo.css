@@ -3,6 +3,10 @@
 ========================================== */
 
 .cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +20,6 @@
 
 .logo {
     display: flex;
-    align-items: center;
     gap: var(--espacamento-medio);
 }
 
@@ -48,9 +51,21 @@
 .hero {
     position: relative;
     display: flex;
-
     min-height: calc(100vh - var(--altura-cabecalho));
+    overflow: hidden;
 }
+
+.hero-imagem {
+    position: absolute;
+    inset: 0;
+    background-image: url("../imagens/bg-main.png");
+    background-size: cover;
+    background-position: center var(--altura-cabecalho);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
 
 .hero::after {
     content: "";
@@ -64,23 +79,15 @@
             transparent 65%);
 }
 
-.hero-imagem {
-    width: 100%;
-    object-fit: cover;
-}
-
 .hero-conteudo {
-    position: absolute;
+    position: relative;
     z-index: 1;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: var(--espacamento-xxl);
-
     min-height: calc(100vh - var(--altura-cabecalho));
     max-width: var(--largura-maxima-conteudo);
-
     padding:
         var(--espacamento-container) var(--espacamento-container) var(--espacamento-container) var(--padding-hero-lateral);
 }
@@ -108,7 +115,6 @@
 }
 
 
-
 /* ==========================================
    SEÇÃO DE COMPRA
 ========================================== */
@@ -117,15 +123,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding: var(--espacamento-secao);
-
     text-align: center;
 }
 
 .secao-compra>.titulo {
     margin-bottom: var(--espacamento-secao);
-
     font-size: var(--fonte-titulo-secao);
     font-weight: 700;
 }
@@ -135,10 +138,8 @@
     flex-direction: column;
     align-items: center;
     gap: var(--espacamento-gigante);
-
     width: var(--largura-card);
     padding: var(--espacamento-container);
-
     background-color: var(--cor-texto-escuro);
     border-radius: var(--raio-card);
 }
@@ -172,11 +173,13 @@
     gap: var(--espacamento-xxl);
 }
 
-
-
 /* ==========================================
    DROPDOWN DE PLATAFORMAS
 ========================================== */
+
+.seletor-plataforma {
+    width: 100%;
+}
 
 .btn-plataforma {
     width: 100%;
@@ -190,6 +193,10 @@
     background-color: var(--cor-fundo-claro);
     color: var(--cor-texto-escuro);
 }
+
+/* .btn-plataforma.ativo{
+    display: none;
+} */
 
 .btn-plataforma.ativo,
 .btn-plataforma.ativo:hover {
@@ -219,6 +226,7 @@
 
 .plataforma-playstation {
     border: var(--borda-padrao) var(--cor-playstation);
+    background-color: var(--cor-fundo-primario);
 }
 
 .plataforma-playstation:hover {
@@ -227,6 +235,7 @@
 
 .plataforma-xbox {
     border: var(--borda-padrao) var(--cor-xbox);
+    background-color: var(--cor-fundo-primario);
 }
 
 .plataforma-xbox:hover {
@@ -235,8 +244,22 @@
 
 .plataforma-pc {
     border: var(--borda-padrao) var(--cor-pc);
+    background-color: var(--cor-fundo-primario);
 }
 
 .plataforma-pc:hover {
     background-color: var(--cor-pc);
+}
+
+.opc-plataforma {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--espacamento-grande);
+    border: none;
+    border-radius: var(--raio-botao);
+    background-color: transparent;
+    color: var(--cor-texto-primario);
+    transition: var(--transicao-padrao);
 }
