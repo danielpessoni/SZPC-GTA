@@ -1,5 +1,30 @@
 /* ==================================================
-   TABLETS E NOTEBOOKS
+   TABLETS E NOTEBOOKS - 1ª QUEBRA
+================================================== */
+
+@media (max-width: 1360px) {
+
+    .lista-plataformas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--espacamento-xxl);
+    }
+
+    .item-plataforma,
+    .item-plataforma:nth-child(4),
+    .item-plataforma:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .item-plataforma:nth-child(5) {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+}
+
+
+/* ==================================================
+   TABLETS E NOTEBOOKS - 2ª QUEBRA
 ================================================== */
 
 @media (max-width: 1024px) {
@@ -47,16 +72,11 @@
     .card-produto {
         width: 100%;
         padding:
-            var(--espacamento-container)
-            var(--espacamento-grande);
+            var(--espacamento-container) var(--espacamento-grande);
     }
 
     .card-conteudo h3 {
         font-size: 2.1875rem;
-    }
-
-    .lista-plataformas {
-        flex-direction: column;
     }
 
     .btn-plataforma {
@@ -72,22 +92,106 @@
 
 
 /* ==================================================
-   CELULARES
+   CELULARES - 1ª QUEBRA
+================================================== */
+
+@media (max-width: 600px) {
+
+    .lista-plataformas {
+        grid-template-columns: 1fr;
+    }
+
+    .item-plataforma,
+    .item-plataforma:nth-child(4),
+    .item-plataforma:nth-child(5) {
+        grid-column: auto;
+    }
+
+}
+
+
+/* ==================================================
+   CELULARES - 2ª QUEBRA
 ================================================== */
 
 @media (max-width: 425px) {
 
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero-imagem {
+        background-position: center 0;
+    }
+
     .hero::after {
-        background: linear-gradient(
-            90deg,
-            var(--cor-gradiente-escuro),
-            var(--cor-gradiente-claro) 100%,
-            transparent 65%
-        );
+        background: linear-gradient(90deg,
+                var(--cor-gradiente-escuro),
+                var(--cor-gradiente-claro) 100%,
+                transparent 65%);
     }
 
     .card-capa {
         max-width: 80%;
     }
 
+    .cabecalho {
+        display: none;
+    }
+}
+
+
+/* ==================================================
+   TELAS MUITO PEQUENAS
+================================================== */
+
+@media (max-width: 300px) {
+
+    .hero {
+        min-height: auto;
+        overflow: visible;
+    }
+
+    .hero-conteudo {
+        position: relative;
+        min-height: auto;
+        max-width: none;
+        padding: var(--espacamento-container) var(--espacamento-grande);
+    }
+
+    .hero-marcas {
+        display: none;
+    }
+
+    .hero-titulo {
+        font-size: 2rem;
+    }
+
+    .hero-texto {
+        font-size: 1rem;
+    }
+
+    .btn-comprar {
+        width: 100%;
+    }
+
+    .secao-compra {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .card-produto {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .logo-plataforma {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .logo-pc {
+        width: 4rem;
+        height: 4rem;
+    }
 }
