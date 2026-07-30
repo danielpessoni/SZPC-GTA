@@ -167,11 +167,25 @@
 }
 
 .lista-plataformas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: var(--espacamento-xxl);
+    justify-items: center;
+    align-items: center;
 }
+
+.item-plataforma {
+    grid-column: span 2;
+}
+
+.item-plataforma:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.item-plataforma:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
 
 /* ==========================================
    DROPDOWN DE PLATAFORMAS
@@ -193,10 +207,6 @@
     background-color: var(--cor-fundo-claro);
     color: var(--cor-texto-escuro);
 }
-
-/* .btn-plataforma.ativo{
-    display: none;
-} */
 
 .btn-plataforma.ativo,
 .btn-plataforma.ativo:hover {
@@ -262,4 +272,66 @@
     background-color: transparent;
     color: var(--cor-texto-primario);
     transition: var(--transicao-padrao);
+}
+
+.logo-plataforma {
+    display: block;
+    
+    width: 10rem;
+    height: 10rem;
+
+    background-color: var(--cor-texto-primario);
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+
+    transition: var(--transicao-padrao);
+}
+.logo-ps5 {
+    mask-image: url("../imagens/logo-ps5.svg");
+    -webkit-mask-image: url("../imagens/logo-ps5.svg");
+}
+
+.logo-xbox-series {
+    mask-image: url("../imagens/logo-xbox-series-s.svg");
+    -webkit-mask-image: url("../imagens/logo-xbox-series-s.svg");
+}
+
+.logo-ps4 {
+    mask-image: url("../imagens/logo-ps4.svg");
+    -webkit-mask-image: url("../imagens/logo-ps4.svg");
+}
+
+.logo-xbox-one {
+    mask-image: url("../imagens/logo-xbox-one.svg");
+    -webkit-mask-image: url("../imagens/logo-xbox-one.svg");
+}
+
+.logo-pc {
+    mask-image: url("../imagens/logo-pc.svg");
+    -webkit-mask-image: url("../imagens/logo-pc.svg");
+    width: 4.5rem;
+}
+
+.logo-plataforma.selecionada {
+    background-color: var(--cor-texto-primario);
+}
+
+.logo-ps5.selecionada,
+.logo-ps4.selecionada {
+    background-color: var(--cor-playstation);
+}
+
+.logo-xbox-series.selecionada,
+.logo-xbox-one.selecionada {
+    background-color: var(--cor-xbox);
+}
+
+.logo-pc.selecionada {
+    background-color: var(--cor-pc);
 }
